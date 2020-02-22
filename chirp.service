@@ -7,9 +7,9 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=joakim
+User=pi
 WorkingDirectory=/home/pi/greenhouse/
-ExecStart=/user/bin/python /home/pi/greenhouse/chirp_mqtt.py
+ExecStart=/usr/bin/python /home/pi/greenhouse/chirp_mqtt.py
 
 [Install]
 WantedBy=multi-user.target
