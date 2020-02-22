@@ -213,7 +213,7 @@ def main():
                                        chirp.temp, scale_sign, chirp.light)
                 print(output)
 
-                sendMessage(topic="tele/chirp/1/SENSOR", temp=chirp.temp, moist=chirp.moist_percent, light=chirp.light)
+                mq.sendMessage(topic="tele/chirp/1/SENSOR", temp=chirp.temp, moist=chirp.moist_percent, light=chirp.light)
 
                 #detect.detect(runFlag=runFlag, display=False)
                 try:
