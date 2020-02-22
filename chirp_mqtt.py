@@ -165,7 +165,7 @@ class MqttInterface:
 
         #{"Time":"2020-02-22T00:38:39", "DHT22":{"Temperature":21.1, "Humidity":32.2}, "TempUnit":"C"}
 
-        #self.client.publish(topic, json.dumps(payload_dict))
+        self.client.publish(topic, json.dumps(payload_dict))
 
     def disconnect(self):
         print("quitting")
@@ -217,7 +217,7 @@ def main():
 
                 #detect.detect(runFlag=runFlag, display=False)
                 try:
-                    time.sleep(10)
+                    time.sleep(60)
                 except(KeyboardInterrupt):
                     print("keyboard Interrupt so ending")
                     mq.disconnect()
