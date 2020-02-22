@@ -1,0 +1,15 @@
+[Unit]
+Description=chirp service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=joakim
+WorkingDirectory=/home/pi/greenhouse/
+ExecStart=/user/bin/python /home/pi/greenhouse/chirp_mqtt.py
+
+[Install]
+WantedBy=multi-user.target
